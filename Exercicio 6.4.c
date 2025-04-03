@@ -1,17 +1,22 @@
+// Online C compiler to run C program online
 #include <stdio.h>
 
-int main() {
-    
-float m;
-    printf("insira a nota: \n");
-    scanf("%f",&m);
-    
-    if(m >= 7.0){
-         printf("Aprovado(a)!\n");
-        
+// Função que testa se um número é par
+int testa_par(int numero) {
+    if (numero % 2 == 0) {
+        return 1; // É par
     } else {
-         printf("Reprovado(a)!\n"); 
-          
-     }
+        return 0; // É ímpar
+    }
+}
+
+int main() {
+    // Testando a função com alguns valores
+    printf("4 é par? %d\n", testa_par(4));
+    printf("5 é par? %d\n", testa_par(5));
+    printf("0 é par? %d\n", testa_par(0));
+    printf("7 é par? %d\n", testa_par(7));
+    printf("-2 é par? %d\n", testa_par(-2));
+    
     return 0;
 }
